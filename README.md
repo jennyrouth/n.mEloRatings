@@ -26,6 +26,7 @@ df_pw <- loader('example_dataset.csv')
 The dataframe will look like this:
 
 |`ResponseId`|`Q`|`A.Code`|`B.Code`|`Winner`|`Loser`|
+|---|---|---|---|---|---|
 |R_22G1pn30ere3rAm|1|Melon|Milk chocolate|Melon|Milk chocolate|
 |R_2D5hdzKSoMrJ9ik| 2|     Prawns|      Croissant| Croissant|         Prawns|
 |R_24IAat95tz832LX| 3|     Nachos|          Steak|     Steak|         Nachos|
