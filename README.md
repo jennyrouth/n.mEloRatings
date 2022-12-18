@@ -4,7 +4,7 @@ Functions to calculate Elo, Mean Elo (mElo) and Normalised Mean Elo (n.mElo) rat
 
 
 ## Introduction
-The n.mElo package allows you to generate ratings and rankings of a set of items using the Elo rating system. The package uses binary pairwise comparison (winner/loser) data about the items. This is usually collected using a survey. See preprint.
+The `n.mElo package` allows you to generate ratings and rankings of a set of items using the Elo rating system. The package uses binary pairwise comparison (winner/loser) data about the items. This is usually collected using a survey. See preprint.
 
 ## Instructions for use
 
