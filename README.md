@@ -51,7 +51,7 @@ melo(df_pw, melo_randomisations = 500, initial_rating = 0, k = 100)
 This will produce a dataframe of mElo ratings:
 
 |`mEloRating`|                  `Code`|
-|---|---|---|
+|---|---|
 |387.773180|        Milk chocolate |
 |267.096594|  Victoria sponge cake |
 |254.239456|             Ice cream|
