@@ -48,5 +48,21 @@ Here, we use the default values of `melo_randomisations` of `500`, with `initial
 melo(df_pw, melo_randomisations = 500, initial_rating = 0, k = 100)
 ```
 
+#### 2.4 Example code to produce dataframe containing Normalised Mean Elo (`n.mElo`) ratings from the mElo dataframe
+
+```R
+norm_melo(df_melo)
+```
+
+This will produce normalised mElo ratings using **min-max** normalisation:
+
+|`mEloRating`|                  `Code`| `n.mEloRating`|
+|387.773180|        Milk chocolate | 1.000000000|
+|267.096594|  Victoria sponge cake | 0.849607664|
+|254.239456|             Ice cream|  0.833584547|
+|244.362544| Chocolate chip muffin | 0.821275517|
+|217.188779|                 Pasta|  0.787410405|
+
+
 
 
