@@ -40,4 +40,13 @@ The dataframe will look like this:
 elo(df_pw)
 ```
 
+#### 2.3 Example code to produce dataframe containing Mean Elo (`mElo`) ratings from pairwise comparisons
+
+Here, we use the default values of `melo_randomisations` of `500`, with `initial_rating`s set to `0`, and the `k` factor set to `100`.
+
+```R
+melo(df_pw, melo_randomisations = 500, initial_rating = 0, k = 100)
+```
+
+
 
