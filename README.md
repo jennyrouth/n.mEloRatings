@@ -17,8 +17,26 @@ An example data set is provided. This contains the outcomes from a questionnaire
 
 ### 2. Running the Elo rating system
 
-Example code to load data via `loader.r`:
+#### 2.1 Example code to load data via `loader.r`:
 
 ```R
-df_pw <- loader(filepath)
+df_pw <- loader('example_dataset.csv')
 ```
+
+The dataframe will look like this:
+
+|`ResponseId`|`Q`|`A.Code`|`B.Code`|`Winner`|`Loser`|
+|R_22G1pn30ere3rAm|1|Melon|Milk chocolate|Melon|Milk chocolate|
+|R_2D5hdzKSoMrJ9ik| 2|     Prawns|      Croissant| Croissant|         Prawns|
+|R_24IAat95tz832LX| 3|     Nachos|          Steak|     Steak|         Nachos|
+|R_3CJEOmprJg9Qngp| 3|     Nachos|          Steak|     Steak|         Nachos|
+|R_1Cj8aNlBXSWK7X8| 3|     Nachos|          Steak|     Steak|         Nachos|
+|R_1eXhwYOBWSP0WwH| 4| Boiled egg|       Brownies|  Brownies|     Boiled egg|
+
+#### 2.2 Example code to produce dataframe containing Elo ratings from pairwise comparisons
+
+```R
+elo(df_pw)
+```
+
+
