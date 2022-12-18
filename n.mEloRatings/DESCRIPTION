@@ -1,0 +1,11 @@
+Package: n.mEloRatings
+Title: Normalised Mean Elo Ratings
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jennifer", "Routh", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Calculates Elo, Mean Elo (mElo), and Normalized Mean Elo (n.mElo) Ratings from pairwise comparisons.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
