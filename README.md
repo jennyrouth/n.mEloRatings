@@ -16,3 +16,9 @@ This package assumes that you are able to import your survey data into RStudio a
 An example data set is provided. This contains the outcomes from a questionnaire designed to rate 91 food items in terms of preference. There are 4095 unique pairs that can be produced with 91 items. 113 questionnaire participants performed 50 randomly allocated pairwise comparisons each. Therefore, there are 5650 rows in the data frame (one per response). The `ResponseId` column contains a unique identifier for each questionnaire participant, there will be 113 unique entries in this column. There is an additional `Q` column which corresponds to the question number from the bank (maximum = 4095). Notice that some questions are asked more than once. `A.Code` is the first food item offered in the pairwise comparison and `B.Code` is the second, the `Winner` is the item selected as preferred, the `Loser` is the other item. 
 
 ### 2. Running the Elo rating system
+
+Example code to load data via `loader.r`:
+
+```R
+df_pw <- loader(filepath)
+```
