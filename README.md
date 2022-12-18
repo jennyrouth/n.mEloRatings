@@ -57,6 +57,7 @@ norm_melo(df_melo)
 This will produce normalised mElo ratings using **min-max** normalisation:
 
 |`mEloRating`|                  `Code`| `n.mEloRating`|
+|---|---|---|
 |387.773180|        Milk chocolate | 1.000000000|
 |267.096594|  Victoria sponge cake | 0.849607664|
 |254.239456|             Ice cream|  0.833584547|
