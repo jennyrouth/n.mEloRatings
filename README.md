@@ -6,6 +6,7 @@ Functions to calculate Elo, mean Elo (mElo) and normalised mean Elo (n.mElo) rat
 The `n.mElo package` allows you to generate ratings and rankings of a set of items using the Elo rating system. The package uses binary pairwise comparison (winner/loser) data about the items. This is usually collected using a survey. See https://doi.org/10.35542/osf.io/e34r2.
 
 Although the functions (Elo, mElo and n.mElo) are written from scratch, the concept of mElo is informed by Clark et al (2018): 10.1371/journal.pone.0190393
+
 mElo ratings can also be generated using their 'EloChoice' R package: https://cran.r-project.org/web/packages/EloChoice/index.html
 
 ## Instructions for use
