@@ -14,7 +14,7 @@ elo(df_pw, initial_rating = 0, k = 100)
 \item{k}{k is a constant representing the maximum point exchange. The exact value of k effects the volatility of system, i.e., how quickly the ratings change with each pairwise comparison. As k increases, winners gain more points and losers lose more points, and the impact that a surprising result has is greater. If k is too low, the ratings won’t change meaningfully as more pairwise comparison data is entered into the system. If k is too high, the ratings won’t stabilise sufficiently. However, given a sufficient number of pairwise comparisons, k has been demonstrated to have a limited effect on eventual item rankings. k is usually set between 16 and 200, it defaults to 100.}
 }
 \value{
-Returns a dataframe consisting of items' Elo ratings. The same Elo ratings should be produced every time the algorithm is run.
+Returns a dataframe consisting of items' Elo ratings. The Elo ratings will vary slightly every time the Elo algorithm is run because the input order of the pairwise comparisons is randomised, and order matters. The ratings should form a stable ranking provided that 1) items are paired randomly, 2) there is sufficient variation in the items from the respondent’s perspectives and 3) there is a reasonable degree of shared perspectives among respondents in the group of study.
 }
 \description{
 Generating Elo ratings from pairwise comparison data

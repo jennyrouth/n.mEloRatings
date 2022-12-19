@@ -44,7 +44,7 @@ The dataframe will look like this:
 ```R
 elo(df_pw)
 ```
-The same Elo ratings should be produced every time the algorithm is run.
+The Elo ratings will vary slightly every time the Elo algorithm is run because the input order of the pairwise comparisons is randomised, and order matters. The ratings should form a stable ranking provided that 1) items are paired randomly, 2) there is sufficient variation in the items from the respondent’s perspectives and 3) there is a reasonable degree of shared perspectives among respondents in the group of study.
 
 #### 2.3 Example code to produce dataframe containing mean Elo (`mElo`) ratings from pairwise comparisons
 
