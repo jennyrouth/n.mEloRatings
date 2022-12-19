@@ -16,7 +16,7 @@ melo(df_pw, melo_randomisations = 500, initial_rating = 0, k = 100)
 \item{k}{k is a constant representing the maximum point exchange. The exact value of k effects the volatility of system, i.e., how quickly the ratings change with each pairwise comparison. As k increases, winners gain more points and losers lose more points, and the impact that a surprising result has is greater. If k is too low, the ratings won’t change meaningfully as more pairwise comparison data is entered into the system. If k is too high, the ratings won’t stabilise sufficiently. However, given a sufficient number of pairwise comparisons, k has been demonstrated to have a limited effect on eventual item rankings. k is usually set between 16 and 200, it defaults to 100.}
 }
 \value{
-Returns a dataframe consisting of items' mElo ratings. Note: the resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided \code{melo_randomisations} is sufficiently large (e.g, 500), the item ranks should not change.
+Returns a dataframe consisting of items' mElo ratings. Note: the resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided \code{melo_randomisations} is sufficiently large (we have found 500 to be sufficient - see Supplementary Item 2 10.35542/osf.io/e34r2), the \emph{ranks} of the items should not change.
 }
 \description{
 Generating mean Elo ratings from pairwise comparison data

@@ -64,7 +64,7 @@ This will produce a dataframe of mElo ratings:
 |244.362544| Chocolate chip muffin |
 |217.188779|                 Pasta|
 
-The resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided `melo_randomisations` is sufficiently large, the ranks of the items should not change.
+The resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided `melo_randomisations` is sufficiently large (we have found 500 to be sufficient - see Supplementary Item 2 10.35542/osf.io/e34r2), the *ranks* of the items should not change.
 
 #### 2.4 Example code to produce dataframe containing Normalised Mean Elo (`n.mElo`) ratings from the mElo dataframe
 
