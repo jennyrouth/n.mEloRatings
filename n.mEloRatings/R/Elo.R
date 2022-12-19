@@ -46,7 +46,7 @@ elo_update = function(input_rating_winner, input_rating_loser, k=100){
 #' @param initial_rating The initial rating of the items at the start of the rating calculations, defaults to 0
 #' @param k k is a constant representing the maximum point exchange. The exact value of k effects the volatility of system, i.e., how quickly the ratings change with each pairwise comparison. As k increases, winners gain more points and losers lose more points, and the impact that a surprising result has is greater. If k is too low, the ratings won’t change meaningfully as more pairwise comparison data is entered into the system. If k is too high, the ratings won’t stabilise sufficiently. However, given a sufficient number of pairwise comparisons, k has been demonstrated to have a limited effect on eventual item rankings. k is usually set between 16 and 200, it defaults to 100.
 #'
-#' @return Returns a dataframe consisting of items' Elo ratings
+#' @return Returns a dataframe consisting of items' Elo ratings. The same Elo ratings should be produced every time the algorithm is run.
 #' @export
 #'
 #' @examples elo(df_pw)

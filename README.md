@@ -13,9 +13,10 @@ mElo ratings can also be generated using their 'EloChoice' R package: https://cr
 
 ### 1. Getting the data: binary pairwise comparison data
 
-This package assumes that you are able to import your survey data into RStudio and rearrange it into the following format:
+This package assumes that you are able to import your survey data into RStudio and convert it to a dataframe.
+The dataframe should be in the following format:
 * Your survey data should be stored in a dataframe consisting of a row for each pairwise comparison response (every single instance that a respondent has completed a pairwise comparison). For example, if there are 100 survey respondents each performing 50 pairwise comparisons then there should be 5000 rows in the data frame.
-* There should be six columns which consist of 1) a respondent identifier (column name: `ResponseId`) - who performed the comparison? 2) the question number, 3) the first option/item offered in the pairwise comparison (column name: `A.Code`), 4) the second option/item offered in the pairwise comparison (column name: `B.Code`), 5) the option/item that was selected by the respondent (column name: `Winner`) and 6) the option/item that was not selected by the respondent (column name: `Loser`).
+* There should be six columns which consist of 1) a respondent identifier (column name: `ResponseId`) - who performed the comparison?, 2) the question number from the bank of questions (column name: `Q`), 3) the first item offered in the pairwise comparison (column name: `A.Code`), 4) the second item offered in the pairwise comparison (column name: `B.Code`), 5) the item that was selected by the respondent (column name: `Winner`) and 6) the item that was not selected by the respondent (column name: `Loser`).
 
 An example data set is provided. This contains the outcomes from a questionnaire designed to rate 91 food items in terms of preference. There are 4095 unique pairs that can be produced with 91 items. 113 questionnaire participants performed 50 randomly allocated pairwise comparisons each. Therefore, there are 5650 rows in the data frame (one per response). The `ResponseId` column contains a unique identifier for each questionnaire participant, there will be 113 unique entries in this column. The `Q` column corresponds to the question number from the bank (maximum = 4095). Notice that some questions are asked more than once. `A.Code` is the first food item offered in the pairwise comparison and `B.Code` is the second, the `Winner` is the item selected as preferred, the `Loser` is the other item. 
 
@@ -43,6 +44,7 @@ The dataframe will look like this:
 ```R
 elo(df_pw)
 ```
+The same Elo ratings should be produced every time the algorithm is run.
 
 #### 2.3 Example code to produce dataframe containing mean Elo (`mElo`) ratings from pairwise comparisons
 
@@ -61,6 +63,8 @@ This will produce a dataframe of mElo ratings:
 |254.239456|             Ice cream|
 |244.362544| Chocolate chip muffin |
 |217.188779|                 Pasta|
+
+The resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided `melo_randomisations` is sufficiently large, the ranks of the items should not change.
 
 #### 2.4 Example code to produce dataframe containing Normalised Mean Elo (`n.mElo`) ratings from the mElo dataframe
 

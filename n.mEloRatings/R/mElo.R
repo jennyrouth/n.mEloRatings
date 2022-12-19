@@ -6,7 +6,7 @@
 #' @param initial_rating 	The initial rating of the items at the start of the rating calculations, defaults to 0
 #' @param k k is a constant representing the maximum point exchange. The exact value of k effects the volatility of system, i.e., how quickly the ratings change with each pairwise comparison. As k increases, winners gain more points and losers lose more points, and the impact that a surprising result has is greater. If k is too low, the ratings won’t change meaningfully as more pairwise comparison data is entered into the system. If k is too high, the ratings won’t stabilise sufficiently. However, given a sufficient number of pairwise comparisons, k has been demonstrated to have a limited effect on eventual item rankings. k is usually set between 16 and 200, it defaults to 100.
 #'
-#' @return  Returns a dataframe consisting of items' mElo ratings
+#' @return  Returns a dataframe consisting of items' mElo ratings. Note: the resultant mElo ratings could be slightly different every time the mElo algorithm is run due to the impact of randomising the input order of pairwise comparisons. However, provided `melo_randomisations` is sufficiently large (e.g, 500), the item ranks should not change.
 #' @export
 #'
 #' @examples melo(df_pw, melo_randomisations=20, initial_rating=100, k=20)
