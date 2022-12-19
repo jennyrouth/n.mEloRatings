@@ -1,4 +1,15 @@
 #mElo
+#' Generating mean Elo ratings from pairwise comparison data
+#'
+#' @param df_pw The dataframe of pairwise comparison outcomes
+#' @param melo_randomisations The mElo randomisation number (X) is the number of times that the Elo rating system is run. Each time the same pairwise comparison data is used, but the order in which the pairwise comparisons are entered into the system is randomised. It could be easier to think of this as X number of virtual sequences of the pairwise comparisons which are fed into the algorithm. This generates a set of X Elo ratings for each item. Each set will have a distribution of values due to the effect of sequence order, and the mean (mElo) rating is subsequently calculated. Defaults to 500.
+#' @param initial_rating 	The initial rating of the items at the start of the rating calculations, defaults to 0
+#' @param k k is a constant representing the maximum point exchange. The exact value of k effects the volatility of system, i.e., how quickly the ratings change with each pairwise comparison. As k increases, winners gain more points and losers lose more points, and the impact that a surprising result has is greater. If k is too low, the ratings won’t change meaningfully as more pairwise comparison data is entered into the system. If k is too high, the ratings won’t stabilise sufficiently. However, given a sufficient number of pairwise comparisons, k has been demonstrated to have a limited effect on eventual item rankings. k is usually set between 16 and 200, it defaults to 100.
+#'
+#' @return  Returns a dataframe consisting of items' mElo ratings
+#' @export
+#'
+#' @examples melo(df_pw, melo_randomisations=20, initial_rating=100, k=20)
 melo = function(df_pw, melo_randomisations=500, initial_rating=0, k=100){
 
   # initialising a list of elo dataframes

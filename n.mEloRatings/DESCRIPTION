@@ -3,8 +3,8 @@ Title: Normalised Mean Elo Ratings
 Version: 0.0.0.9000
 Authors@R: 
     person("Jennifer", "Routh", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Calculates Elo, Mean Elo (mElo), and Normalized Mean Elo (n.mElo) Ratings from pairwise comparisons.
+           comment = c(ORCID = "0000-0002-4177-7452"))
+Description: Calculates Elo, mean Elo (mElo), and normalized Mean Elo (n.mElo) ratings from pairwise comparisons.
 License: `use_mit_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
