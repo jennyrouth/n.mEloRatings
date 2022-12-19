@@ -1,12 +1,20 @@
 #' Loader function
 #' @description Loads the .csv file containing the pairwise comparison data. This file should contain the following columns:
+#'
 #' `ResponseId` - a unique identifier for each questionnaire participant,
+#'
 #' `Q` - the question number from the bank of all possible questions (as opposed to the question order presented to each participant),
+#'
 #' `A.Code` - the first item offered in the pairwise comparison,
+#'
 #' `B.Code`- the second item offered in the pairwise comparison,
+#'
 #' `Winner` - the item selected by the participant,
+#'
 #' `Loser` - the item NOT selected by the participant.
+#'
 #' A single row for every pairwise comparison performed by every participant.
+#'
 #' @param filename The name of the .csv file, or the entire .csv file path name.
 #' @param repo The folder in which the .csv file is stored. Defaults to blank.
 #'

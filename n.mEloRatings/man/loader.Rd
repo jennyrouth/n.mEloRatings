@@ -16,12 +16,19 @@ Returns a dataframe to be used in the Elo/mElo/norm_mElo functions
 }
 \description{
 Loads the .csv file containing the pairwise comparison data. This file should contain the following columns:
+
 \code{ResponseId} - a unique identifier for each questionnaire participant,
+
 \code{Q} - the question number from the bank of all possible questions (as opposed to the question order presented to each participant),
+
 \code{A.Code} - the first item offered in the pairwise comparison,
+
 \code{B.Code}- the second item offered in the pairwise comparison,
+
 \code{Winner} - the item selected by the participant,
+
 \code{Loser} - the item NOT selected by the participant.
+
 A single row for every pairwise comparison performed by every participant.
 }
 \examples{
